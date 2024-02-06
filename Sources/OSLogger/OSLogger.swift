@@ -3,9 +3,7 @@ import OSLog
 public final class OSLogger {
 
     // MARK: - Properties
-    public lazy var shared: OSLogger = {
-        return OSLogger()
-    }()
+    public static let shared: OSLogger = OSLogger()
     private var logger: Logger
     private var description: String {
         return Date().ISO8601Format()
